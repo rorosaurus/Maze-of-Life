@@ -4,12 +4,11 @@ import javafx.util.Pair;
 
 /**
  * User: Rory
- * Date: 1/30/13
- * Time: 5:14 PM
+ * Date: 1/31/13
+ * Time: 9:43 AM
  */
 
 public class Puzzle {
-
     private int[][] board;
     private Pair<Integer,Integer> goalCoord;
 

@@ -1,4 +1,7 @@
+package io;
+
 import javafx.util.Pair;
+import pojos.BinaryPuzzle;
 import pojos.Puzzle;
 
 import java.io.*;
@@ -25,6 +28,35 @@ public class PuzzleReader {
     }
 
     public Puzzle readPuzzle(){
+        return readPuzzleFile();
+    }
+
+    public BinaryPuzzle readBinaryPuzzle(){
+        Puzzle puzzle = readPuzzleFile();
+        int[][] board = puzzle.getBoard();
+
+        boolean[][] newBoard = new boolean[board.length][board[0].length];
+        Pair<Integer,Integer> goalCoord = puzzle.getGoalCoord();
+        Pair<Integer,Integer> myCoord = null;
+
+        for(int i=0; i<board.length;i++){
+            for(int j=0; j<board[0].length;j++){
+                if(board[i][j] == 2){
+                    myCoord = new Pair<Integer, Integer>(i,j);
+                }
+                else if(board[i][j] == 1){
+                    newBoard[i][j] = true;
+                }
+                else{
+                    newBoard[i][j] = false;
+                }
+            }
+        }
+
+        return new BinaryPuzzle(newBoard,goalCoord,myCoord);
+    }
+
+    private Puzzle readPuzzleFile(){
         BufferedReader br = null;
         int[][] board = new int[0][];
         Pair<Integer, Integer> goalCoord = null;
@@ -42,9 +74,14 @@ public class PuzzleReader {
                     // First we read the width and height, separate them
                     String[] sGoalCoord = currentLine.split(" ", 2);
                     goalCoord = new Pair<Integer, Integer>(Integer.parseInt(sGoalCoord[0]),Integer.parseInt(sGoalCoord[1]));
-                    // Read in the rest of the file
+                    // Read in the rest of the file, filling board and defining our location
+                    int rowNum = 0;
                     while ((currentLine = br.readLine()) != null) {
-
+                        String[] row = currentLine.split("");
+                        for(int i=1; i<row.length;i++){
+                            board[i-1][rowNum] = Integer.parseInt(row[i]);
+                        }
+                        rowNum++;
                     }
                 }
                 else{
