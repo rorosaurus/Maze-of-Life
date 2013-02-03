@@ -1,6 +1,6 @@
 package puzzle;
 
-import javafx.util.Pair;
+import java.awt.*;
 
 /**
  * User: Rory
@@ -11,9 +11,9 @@ import javafx.util.Pair;
 // TODO: prepare this class for future use
 public class IntegerPuzzle {
     private int[][] board;
-    private Pair<Integer,Integer> goalCoord;
+    private Point goalCoord;
 
-    public IntegerPuzzle(int[][] board, Pair<Integer, Integer> goalCoord) {
+    public IntegerPuzzle(int[][] board, Point goalCoord) {
         this.board = board;
         this.goalCoord = goalCoord;
     }
@@ -26,11 +26,11 @@ public class IntegerPuzzle {
         this.board = board;
     }
 
-    public Pair<Integer, Integer> getGoalCoord() {
+    public Point getGoalCoord() {
         return goalCoord;
     }
 
-    public void setGoalCoord(Pair<Integer, Integer> goalCoord) {
+    public void setGoalCoord(Point goalCoord) {
         this.goalCoord = goalCoord;
     }
 }

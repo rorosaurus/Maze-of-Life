@@ -1,6 +1,6 @@
 package puzzle;
 
-import javafx.util.Pair;
+import java.awt.*;
 
 /**
  * User: Rory
@@ -18,10 +18,10 @@ public class BinaryPuzzle {
     private boolean[][] board;
 
     // The coordinates of the player
-    private Pair<Integer,Integer> myCoord;
+    private Point myCoord;
 
     // The coordinates of the goal
-    private Pair<Integer,Integer> goalCoord;
+    private Point goalCoord;
     // TODO: store this goalCoord somewhere else.. there's no need for it to be duplicated in thousands of instances
 
     /**
@@ -30,7 +30,7 @@ public class BinaryPuzzle {
      * @param goalCoord the coords of the goal
      * @param myCoord the coords of the player
      */
-    public BinaryPuzzle(boolean[][] board, Pair<Integer, Integer> goalCoord, Pair<Integer, Integer> myCoord) {
+    public BinaryPuzzle(boolean[][] board, Point goalCoord, Point myCoord) {
         this.board = board;
         this.goalCoord = goalCoord;
         this.myCoord = myCoord;
@@ -48,7 +48,7 @@ public class BinaryPuzzle {
      * Simple getter
      * @return the goal coords
      */
-    public Pair<Integer, Integer> getGoalCoord() {
+    public Point getGoalCoord() {
         return goalCoord;
     }
 
@@ -56,7 +56,7 @@ public class BinaryPuzzle {
      * Simple getter
      * @return the player coords
      */
-    public Pair<Integer, Integer> getMyCoord() {
+    public Point getMyCoord() {
         return myCoord;
     }
 }

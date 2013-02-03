@@ -1,10 +1,8 @@
 import io.PuzzleReader;
 import io.SolutionWriter;
-import javafx.util.Pair;
 import pojo.PuzzleState;
 import puzzle.BinaryPuzzle;
 import solver.BftsSolver;
-import puzzle.PuzzleExpander;
 
 /**
  * User: Rory

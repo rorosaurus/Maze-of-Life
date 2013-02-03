@@ -23,7 +23,7 @@ public class PuzzleState {
     private PuzzleState parent;
 
     // The location that you moved to to obtain this state
-    //private Pair<Integer,Integer> action;
+    //private Point action;
 
     // The cost to move to this state from the parent
     //private int pathcost;

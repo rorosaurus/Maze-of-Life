@@ -1,9 +1,9 @@
 package io;
 
-import javafx.util.Pair;
 import puzzle.BinaryPuzzle;
 import puzzle.IntegerPuzzle;
 
+import java.awt.*;
 import java.io.*;
 
 /**
@@ -90,14 +90,14 @@ public class PuzzleReader {
 
         // Initialize variables to be used to construct the BinaryPuzzle
         boolean[][] newBoard = new boolean[board.length][board[0].length];
-        Pair<Integer,Integer> goalCoord = integerPuzzle.getGoalCoord();
-        Pair<Integer,Integer> myCoord = null;
+        Point goalCoord = integerPuzzle.getGoalCoord();
+        Point myCoord = null;
 
         for(int i=0; i<board.length;i++){
             for(int j=0; j<board[0].length;j++){
                 // Special case for "our" cell
                 if(board[i][j] == 2){
-                    myCoord = new Pair<Integer, Integer>(i,j);
+                    myCoord = new Point(i,j);
                 }
                 // All alive cells are set to true
                 else if(board[i][j] == 1){
@@ -121,7 +121,7 @@ public class PuzzleReader {
         // Initialize variables that need to persist
         BufferedReader br = null;
         int[][] board = new int[0][];
-        Pair<Integer, Integer> goalCoord = null;
+        Point goalCoord = null;
 
         // Begin reading from file
         try {
@@ -139,7 +139,7 @@ public class PuzzleReader {
                 if ((currentLine = br.readLine()) != null) {
                     // First we read the width and height, separate them
                     String[] sGoalCoord = currentLine.split(" ", 2);
-                    goalCoord = new Pair<Integer, Integer>(Integer.parseInt(sGoalCoord[0]),Integer.parseInt(sGoalCoord[1]));
+                    goalCoord = new Point(Integer.parseInt(sGoalCoord[0]),Integer.parseInt(sGoalCoord[1]));
 
                     // Read in the rest of the file, filling board and defining our location
                     int rowNum = 0;

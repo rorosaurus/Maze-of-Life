@@ -1,9 +1,9 @@
 package puzzle;
 
 import io.PuzzleReader;
-import javafx.util.Pair;
 import pojo.PuzzleState;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -35,8 +35,7 @@ public class PuzzleExpander {
 
         // Be very careful to avoid manipulating references to our original state
         boolean[][] oldBoard = oldNode.getState().getBoard().clone();
-        Pair<Integer,Integer> oldYou = new Pair<Integer, Integer>(oldNode.getState().getMyCoord().getKey(),
-                oldNode.getState().getMyCoord().getValue());
+        Point oldYou = new Point(oldNode.getState().getMyCoord().x, oldNode.getState().getMyCoord().y);
 
         // Iterate across the 9 possible moves
         for(int i=-1; i<=1;i++){
@@ -45,11 +44,11 @@ public class PuzzleExpander {
                 try{
                     // By checking the cell before we move, we'll ensure we never move onto another cell
                     // We'll also trigger Exceptions on moves off the board
-                    if(!oldBoard[oldYou.getKey() + i][oldYou.getValue() + j]){
+                    if(!oldBoard[oldYou.x + i][oldYou.y + j]){
                         // If we get this far, then we know the cell is empty and we can actually move there
 
                         // Here's where we'll try to move
-                        Pair<Integer,Integer> myNewCoord = new Pair<Integer, Integer>(oldYou.getKey() + i,oldYou.getValue() + j);
+                        Point myNewCoord = new Point(oldYou.x + i,oldYou.y + j);
                         int neighbors = getNumLiveNeighbors(oldNode.getState(),myNewCoord,myNewCoord);
                         // Make sure we won't kill ourselves moving there
                         if(!(neighbors < 2 || neighbors > 3)){
@@ -58,7 +57,7 @@ public class PuzzleExpander {
                             for(int a=0;a<oldBoard.length;a++){
                                 for(int b=0;b<oldBoard[a].length;b++){
                                     // Determine the number of neighbors to our current point
-                                    Pair<Integer,Integer> currentCoords = new Pair<Integer, Integer>(a,b);
+                                    Point currentCoords = new Point(a,b);
                                     int numLiveNeighbors = getNumLiveNeighbors(oldNode.getState(),currentCoords,myNewCoord);
 
                                     // Is the current cell alive or dead?
@@ -88,11 +87,11 @@ public class PuzzleExpander {
                             // New board constructed!
 
                             // Make sure no other cell is occupying my spot on the new board
-                            newBoard[oldYou.getKey() + i][oldYou.getValue() + j] = false;
+                            newBoard[oldYou.x+ i][oldYou.y + j] = false;
                             // This is only needed because I'm storing my location separate from other cells for MAXIMUM MEMORY EFFICIENCY!
 
                             // Construct my new current coordinates
-                            Pair<Integer,Integer> newCoord = new Pair<Integer,Integer>(oldYou.getKey() + i,oldYou.getValue() + j);
+                            Point newCoord = new Point(oldYou.x + i,oldYou.y + j);
                             // Construct the new puzzle object
                             BinaryPuzzle newPuzzle = new BinaryPuzzle(newBoard,oldNode.getState().getGoalCoord(), newCoord);
                             // Construct the new State
@@ -116,7 +115,7 @@ public class PuzzleExpander {
      * @param myNewCoord the new location of the player
      * @return an int representing the number of living cells neighboring
      */
-    private static int getNumLiveNeighbors(BinaryPuzzle puzzle, Pair<Integer,Integer> coordToCheck, Pair<Integer,Integer> myNewCoord){
+    private static int getNumLiveNeighbors(BinaryPuzzle puzzle, Point coordToCheck, Point myNewCoord){
         // Don't manipulate the old data
         boolean[][] board = puzzle.getBoard().clone();
         // Initialize
@@ -129,8 +128,8 @@ public class PuzzleExpander {
                     try{
                         // If board[][] at the current location is true, there's a living cell
                         // Or if the player is there, we know there's a cell
-                        if(board[(coordToCheck.getKey() + i)][(coordToCheck.getValue() + j)] ||
-                                myNewCoord.equals(new Pair<Integer,Integer>(coordToCheck.getKey() + i, coordToCheck.getValue() + j))){
+                        if(board[(coordToCheck.x + i)][(coordToCheck.y + j)] ||
+                                myNewCoord.equals(new Point(coordToCheck.x + i, coordToCheck.y + j))){
                             numLiveNeighbors++;
                         }
                     }catch(IndexOutOfBoundsException e){
