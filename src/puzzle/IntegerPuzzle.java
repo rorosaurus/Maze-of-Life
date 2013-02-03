@@ -1,4 +1,4 @@
-package pojos;
+package puzzle;
 
 import javafx.util.Pair;
 
@@ -8,11 +8,11 @@ import javafx.util.Pair;
  * Time: 9:43 AM
  */
 
-public class Puzzle {
+public class IntegerPuzzle {
     private int[][] board;
     private Pair<Integer,Integer> goalCoord;
 
-    public Puzzle(int[][] board, Pair<Integer, Integer> goalCoord) {
+    public IntegerPuzzle(int[][] board, Pair<Integer, Integer> goalCoord) {
         this.board = board;
         this.goalCoord = goalCoord;
     }
