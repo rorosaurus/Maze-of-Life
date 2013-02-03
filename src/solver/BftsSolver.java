@@ -16,7 +16,7 @@ public class BftsSolver {
 
     public PuzzleState graphSearch(BinaryPuzzle problem){
         // Create the initial state
-        PuzzleState initialState = new PuzzleState(problem, null);
+        final PuzzleState initialState = new PuzzleState(problem, null);
 
         // Define the frontier
         ArrayList<PuzzleState> frontier = new ArrayList<PuzzleState>();

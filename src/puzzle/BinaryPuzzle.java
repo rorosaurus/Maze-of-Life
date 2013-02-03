@@ -15,6 +15,7 @@ import javafx.util.Pair;
 public class BinaryPuzzle {
 
     private boolean[][] board;
+    // todo: store this goalCoord somewhere else.. there's no need for it to be duplicated in thousands of instances
     private Pair<Integer,Integer> goalCoord;
     private Pair<Integer,Integer> myCoord;
 
