@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d0f750a-0730-4fe1-abe4-800824fc7e65" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/puzzle1solution.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/puzzle2solution.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/puzzle3solution.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/puzzle4solution.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MazeOfLife.iws" afterPath="$PROJECT_DIR$/MazeOfLife.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/PuzzleReader.java" afterPath="$PROJECT_DIR$/src/io/PuzzleReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/SolutionWriter.java" afterPath="$PROJECT_DIR$/src/io/SolutionWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pojo/PuzzleState.java" afterPath="$PROJECT_DIR$/src/pojo/PuzzleState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/Puzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/Puzzle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" afterPath="$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" />
     </list>
     <ignored path="MazeOfLife.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,7 +76,7 @@
       <file leaf-file-name="SolutionWriter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/io/SolutionWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.21058688">
+            <state line="11" column="13" selection-start="189" selection-end="189" vertical-scroll-proportion="0.093210585">
               <folding>
                 <element signature="e#505#518#0" expanded="true" />
               </folding>
@@ -515,7 +511,11 @@
       <created>1359858349071</created>
       <updated>1359858349071</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final game implementations, some fixes">
+      <created>1359867185643</created>
+      <updated>1359867185643</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -581,7 +581,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial solution writer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final game implementations, some fixes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -598,6 +598,7 @@
     <MESSAGE value="initial implementation of construction of binaryPuzzles and puzzles" />
     <MESSAGE value="Solver logic in place, beginning game logic" />
     <MESSAGE value="Initial solution writer" />
+    <MESSAGE value="Final game implementations, some fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -716,7 +717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/SolutionWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.21058688">
+        <state line="11" column="13" selection-start="189" selection-end="189" vertical-scroll-proportion="0.093210585">
           <folding>
             <element signature="e#505#518#0" expanded="true" />
           </folding>
