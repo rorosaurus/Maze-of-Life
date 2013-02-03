@@ -24,21 +24,45 @@ public class Main {
      * @param args command line arguments passed in
      */
     public static void main(String[] args){
-        int puzzleNum = 5;
 
         // Create a new PuzzleReader to read the file
-        PuzzleReader puzzleReader = new PuzzleReader(puzzleNum);
+        PuzzleReader puzzleReader = null;
 
-        // Create a new BinaryPuzzle to be solved
-        BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
+        if(args.length != 1){
+            System.out.println("Improper use.  Please ensure you provide this program with an argument specifying a puzzle file.");
+            System.out.println("You may append the numbers '1-5' to the end of your launch parameters to select a local copy of a puzzle.");
+            System.out.println("Alternatively, you may append the absolute file path to the puzzle file.");
+            return;
+        }
+        else{
+            try{
+                if(Integer.parseInt(args[0]) > 0 && Integer.parseInt(args[0]) <= 5){
+                    puzzleReader = new PuzzleReader(Integer.parseInt(args[0]));
+                }
+            }catch(Exception e){
+                System.err.println("arg[0] is not a puzzle number, assuming absolute file path.");
+                puzzleReader = new PuzzleReader(args[0]);
+            }
+        }
 
-        // Create a new solver
-        BftsSolver solver = new BftsSolver();
+        if(puzzleReader != null){
+            // Create a new BinaryPuzzle to be solved
+            BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
 
-        // Run the solver and store the resulting object
-        PuzzleState finalState = solver.graphSearch(binaryPuzzle);
+            // Create a new solver
+            BftsSolver solver = new BftsSolver();
 
-        // Write the solution to a file in the /solution/ directory
-        SolutionWriter.writeSolution("puzzle" + puzzleNum + "solution.txt",finalState);
+            // Run the solver and store the resulting object
+            PuzzleState finalState = solver.graphSearch(binaryPuzzle);
+
+            // Write the solution to a file in the /solution/ directory
+            SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);
+        }
+        else{
+            System.out.println("Improper use.  Please ensure you provide this program with an argument specifying a puzzle file.");
+            System.out.println("You may append the numbers '1-5' to the end of your launch parameters to select a local copy of a puzzle.");
+            System.out.println("Alternatively, you may append the absolute file path to the puzzle file.");
+            return;
+        }
     }
 }

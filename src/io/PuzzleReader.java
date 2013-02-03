@@ -42,6 +42,20 @@ public class PuzzleReader {
     }
 
     /**
+     * Simple function to give us the puzzle number
+     * @return an int representing the puzzle number
+     */
+    public int getPuzzleNumber(){
+        int result = 0;
+        try{
+            result = Integer.parseInt(puzzlePath.substring(puzzlePath.length()-5,puzzlePath.length()-4));
+        }catch(Exception e){
+            System.err.println("Error forming puzzle number.");
+        }
+        return result;
+    }
+
+    /**
      * Simple getter to obtain the current PuzzlePath
      * @return a String representing the path to the puzzle
      */

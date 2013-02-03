@@ -12,8 +12,16 @@ import java.util.ArrayList;
  * Time: 3:24 PM
  */
 
+/**
+ * This class implements the Breadth First Tree Search
+ */
 public class BftsSolver {
 
+    /**
+     * Solves the puzzle
+     * @param problem the Puzzle to solve
+     * @return the State that reaches the goal
+     */
     public PuzzleState graphSearch(BinaryPuzzle problem){
         // Create the initial state
         final PuzzleState initialState = new PuzzleState(problem, null);
@@ -37,7 +45,6 @@ public class BftsSolver {
 
             // If the chosen node contains a goal state, then we return the corresponding solution
             if(chosenNode.isGoalState()){
-                // todo: verify we can pull the solution from this single node
                 return chosenNode;
             }
 
@@ -54,7 +61,7 @@ public class BftsSolver {
                 }
             }
         }
-        // todo: return fail if we get this far
+        // If we get this far, we've found no solution
         return null;
     }
 }
