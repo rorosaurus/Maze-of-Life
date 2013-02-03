@@ -14,38 +14,49 @@ import javafx.util.Pair;
  */
 public class BinaryPuzzle {
 
+    // 2D array of booleans to represent dead/alive cells on the board (excluding player)
     private boolean[][] board;
-    // todo: store this goalCoord somewhere else.. there's no need for it to be duplicated in thousands of instances
-    private Pair<Integer,Integer> goalCoord;
+
+    // The coordinates of the player
     private Pair<Integer,Integer> myCoord;
 
+    // The coordinates of the goal
+    private Pair<Integer,Integer> goalCoord;
+    // TODO: store this goalCoord somewhere else.. there's no need for it to be duplicated in thousands of instances
+
+    /**
+     * Constructor
+     * @param board a 2D array of booleans to represent dead/alive cells on the board (excluding player)
+     * @param goalCoord the coords of the goal
+     * @param myCoord the coords of the player
+     */
     public BinaryPuzzle(boolean[][] board, Pair<Integer, Integer> goalCoord, Pair<Integer, Integer> myCoord) {
         this.board = board;
         this.goalCoord = goalCoord;
         this.myCoord = myCoord;
     }
 
+    /**
+     * Simple getter
+     * @return the board
+     */
     public boolean[][] getBoard() {
         return board;
     }
 
-    public void setBoard(boolean[][] board) {
-        this.board = board;
-    }
-
+    /**
+     * Simple getter
+     * @return the goal coords
+     */
     public Pair<Integer, Integer> getGoalCoord() {
         return goalCoord;
     }
 
-    public void setGoalCoord(Pair<Integer, Integer> goalCoord) {
-        this.goalCoord = goalCoord;
-    }
-
+    /**
+     * Simple getter
+     * @return the player coords
+     */
     public Pair<Integer, Integer> getMyCoord() {
         return myCoord;
-    }
-
-    public void setMyCoord(Pair<Integer, Integer> myCoord) {
-        this.myCoord = myCoord;
     }
 }

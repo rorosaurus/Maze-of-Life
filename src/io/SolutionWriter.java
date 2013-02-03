@@ -33,19 +33,25 @@ public class SolutionWriter {
         try{
             File file = new File(filePath);
 
-            // if file doesnt exists, then create it
+            // if file doesn't exists, then create it
             if (!file.exists()) {
                 file.createNewFile();
             }
             FileWriter fstream = new FileWriter(file.getAbsoluteFile());
             BufferedWriter out = new BufferedWriter(fstream);
             out.write("GOAL FOUND!\n");
-            out.write("\n");
-            for(PuzzleState state : solution){
-                out.write(state.getState().getMyCoord().toString() + "\n");
+            out.write("\nSolution\n\n");
+            out.write("(" + solution.get(0).getState().getMyCoord().getKey() + "," + solution.get(0).getState().getMyCoord().getValue() + ") ");
+            for(int i=1;i<solution.size();i++){
+                PuzzleState state = solution.get(i);
+                out.write("-> (" + state.getState().getMyCoord().getKey() + "," + state.getState().getMyCoord().getValue() + ")\n");
+                if(i < solution.size()-1){
+                    out.write("(" + state.getState().getMyCoord().getKey() + "," + state.getState().getMyCoord().getValue() + ") ");
+                }
             }
-            out.write("\n");
+            out.write("\nBoard States\n");
             for(PuzzleState state : solution){
+                out.write("\n");
                 boolean[][] board = state.getState().getBoard();
                 Pair<Integer,Integer> myCoord = state.getState().getMyCoord();
                 for(int i=0;i<board[0].length;i++){
@@ -63,8 +69,9 @@ public class SolutionWriter {
                     }
                     out.write(output + "\n");
                 }
-                out.write("\n");
             }
+            out.write("\nPath Cost\n\n");
+            out.write(Integer.toString(solution.size()-1));
             out.close();
         }catch (Exception e){
             // todo: handle

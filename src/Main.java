@@ -12,19 +12,33 @@ import puzzle.PuzzleExpander;
  * Time: 4:31 PM
  */
 
+/**
+ * Why did the programmer quit his job?
+ * ...
+ * Because he didn't get arrays!
+ */
 public class Main {
 
+    /**
+     * main function, entry point
+     * @param args command line arguments passed in
+     */
     public static void main(String[] args){
-        int puzzleNum = 1;
+        int puzzleNum = 5;
 
+        // Create a new PuzzleReader to read the file
         PuzzleReader puzzleReader = new PuzzleReader(puzzleNum);
 
+        // Create a new BinaryPuzzle to be solved
         BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
 
+        // Create a new solver
         BftsSolver solver = new BftsSolver();
 
+        // Run the solver and store the resulting object
         PuzzleState finalState = solver.graphSearch(binaryPuzzle);
 
+        // Write the solution to a file in the /solution/ directory
         SolutionWriter.writeSolution("puzzle" + puzzleNum + "solution.txt",finalState);
     }
 }

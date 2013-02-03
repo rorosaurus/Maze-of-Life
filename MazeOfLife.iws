@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d0f750a-0730-4fe1-abe4-800824fc7e65" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/io/SolutionWriter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MazeOfLife.iws" afterPath="$PROJECT_DIR$/MazeOfLife.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/PuzzleReader.java" afterPath="$PROJECT_DIR$/src/io/PuzzleReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/SolutionWriter.java" afterPath="$PROJECT_DIR$/src/io/SolutionWriter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pojo/PuzzleState.java" afterPath="$PROJECT_DIR$/src/pojo/PuzzleState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/Puzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/Puzzle.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" afterPath="$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/solver/BftsSolver.java" afterPath="$PROJECT_DIR$/src/solver/BftsSolver.java" />
     </list>
     <ignored path="MazeOfLife.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,99 +28,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/io/PuzzleReader.java" line="154" class="io.PuzzleReader" package="io">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/io/SolutionWriter.java" line="22" class="io.SolutionWriter" package="io">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/solver/BftsSolver.java" line="30" class="solver.BftsSolver" package="solver">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/solver/BftsSolver.java" line="21" class="solver.BftsSolver" package="solver">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" line="92" class="puzzle.PuzzleExpander" package="puzzle">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" line="24" class="puzzle.PuzzleExpander" package="puzzle">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" line="75" class="puzzle.PuzzleExpander" package="puzzle">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -161,7 +71,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="45" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
+            <state line="40" column="56" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,54 +80,9 @@
       <file leaf-file-name="SolutionWriter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/io/SolutionWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="28" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.7329435">
+            <state line="17" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.21058688">
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#505#518#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PuzzleReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io/PuzzleReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="42" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PuzzleExpander.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/puzzle/PuzzleExpander.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="64" selection-start="1737" selection-end="1737" vertical-scroll-proportion="-7.5384617">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#738#751#0" expanded="true" />
-                <element signature="e#873#891#0" expanded="true" />
-                <element signature="e#2033#2051#0" expanded="true" />
-                <element signature="e#4256#4273#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="puzzle1.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/puzzles/puzzle1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="7" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PuzzleState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pojo/PuzzleState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="5" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,30 +91,11 @@
       <file leaf-file-name="BftsSolver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/solver/BftsSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="-6.230769">
+            <state line="32" column="0" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#467#480#0" expanded="true" />
                 <element signature="e#584#597#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Puzzle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/puzzle/Puzzle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="56" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryPuzzle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="116" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -270,19 +116,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/PuzzleReader.java" />
         <option value="$PROJECT_DIR$/src/pojos/BinaryPuzzle.java" />
-        <option value="$PROJECT_DIR$/src/io/PuzzleReader.java" />
         <option value="$PROJECT_DIR$/src/pojos/PuzzleState.java" />
         <option value="$PROJECT_DIR$/src/pojos/Puzzle.java" />
         <option value="$PROJECT_DIR$/src/pojos/IntegerPuzzle.java" />
         <option value="$PROJECT_DIR$/src/puzzle/PuzzleState.java" />
-        <option value="$PROJECT_DIR$/src/puzzle/Puzzle.java" />
         <option value="$PROJECT_DIR$/src/pojo/Solution.java" />
-        <option value="$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/io/SolutionWriter.java" />
         <option value="$PROJECT_DIR$/src/solver/BftsSolver.java" />
-        <option value="$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" />
+        <option value="$PROJECT_DIR$/src/io/SolutionWriter.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/pojo/PuzzleState.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java" />
+        <option value="$PROJECT_DIR$/src/io/PuzzleReader.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/Puzzle.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/PuzzleExpander.java" />
       </list>
     </option>
   </component>
@@ -419,6 +266,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MazeOfLife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maze of Life" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solutions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -650,7 +511,11 @@
       <created>1359852140707</created>
       <updated>1359852140707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial solution writer">
+      <created>1359858349071</created>
+      <updated>1359858349071</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -662,7 +527,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39732143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39732143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -716,7 +581,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solver logic in place, beginning game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial solution writer" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -732,6 +597,7 @@
     <MESSAGE value="Initial commit of project files and puzzles" />
     <MESSAGE value="initial implementation of construction of binaryPuzzles and puzzles" />
     <MESSAGE value="Solver logic in place, beginning game logic" />
+    <MESSAGE value="Initial solution writer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -741,20 +607,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/Puzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="56" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_09/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="303" column="12" selection-start="13164" selection-end="13164" vertical-scroll-proportion="0.56731874">
@@ -765,13 +617,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_09/jre/lib/jfxrt.jar!/javafx/util/Pair.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="21" selection-start="512" selection-end="512" vertical-scroll-proportion="0.3521289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="116" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -790,65 +635,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/puzzles/puzzle1.txt">
+    <entry file="file://$PROJECT_DIR$/solutions/puzzle1solution.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+        <state line="20" column="3" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="45" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/PuzzleReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="42" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
+        <state line="40" column="56" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/solver/BftsSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="-6.230769">
+        <state line="32" column="0" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#467#480#0" expanded="true" />
             <element signature="e#584#597#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/PuzzleExpander.java">
+    <entry file="file://$PROJECT_DIR$/src/io/PuzzleReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="64" selection-start="1737" selection-end="1737" vertical-scroll-proportion="-7.5384617">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#738#751#0" expanded="true" />
-            <element signature="e#873#891#0" expanded="true" />
-            <element signature="e#2033#2051#0" expanded="true" />
-            <element signature="e#4256#4273#0" expanded="true" />
-          </folding>
+        <state line="152" column="42" selection-start="5957" selection-end="5957" vertical-scroll-proportion="2.895282">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pojo/PuzzleState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="5" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
+        <state line="60" column="55" selection-start="1687" selection-end="1687" vertical-scroll-proportion="1.1737629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/BinaryPuzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="5" selection-start="1417" selection-end="1417" vertical-scroll-proportion="1.0172613">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/puzzles/puzzle1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="63" selection-end="63" vertical-scroll-proportion="0.15650173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/Puzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="72" selection-end="72" vertical-scroll-proportion="0.136939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="142" selection-end="142" vertical-scroll-proportion="0.19562715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/PuzzleExpander.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="22" selection-start="8289" selection-end="8289" vertical-scroll-proportion="3.012658">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#981#994#0" expanded="true" />
+            <element signature="e#1198#1216#0" expanded="true" />
+            <element signature="e#2065#2083#0" expanded="true" />
+            <element signature="e#2813#2831#0" expanded="true" />
+            <element signature="e#5171#5188#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/SolutionWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.7329435">
+        <state line="17" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.21058688">
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#505#518#0" expanded="true" />
           </folding>
         </state>

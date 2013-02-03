@@ -130,7 +130,7 @@ public class PuzzleReader {
                     // Read in the rest of the file, filling board and defining our location
                     int rowNum = 0;
                     while ((currentLine = br.readLine()) != null) {
-                        // todo: try doing this using just string indexes... why didn't you think about that in the first place?
+                        // TODO: Do this using just string indexes. Why didn't you do that in the first place, numbskull?
                         String[] row = currentLine.split("");
                         // Start at one because .split("") gives us an empty array[0]
                         for(int i=1; i<row.length;i++){
@@ -142,11 +142,11 @@ public class PuzzleReader {
                     }
                 }
                 else{
-                    //todo: handle
+                    throw new Exception("File improperly formatted.");
                 }
             }
             else{
-                // todo: handle
+                throw new Exception("File improperly formatted.");
             }
         // Catch appropriate exceptions
         } catch (Exception e) {

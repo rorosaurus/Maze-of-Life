@@ -6,7 +6,7 @@ package puzzle;
  * Time: 3:20 PM
  */
 
-// todo: make binary and integer puzzles implement this?
+// TODO: make binary and integer puzzles implement this?
 public interface Puzzle {
 
 }

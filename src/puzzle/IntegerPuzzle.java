@@ -8,6 +8,7 @@ import javafx.util.Pair;
  * Time: 9:43 AM
  */
 
+// TODO: prepare this class for future use
 public class IntegerPuzzle {
     private int[][] board;
     private Pair<Integer,Integer> goalCoord;
