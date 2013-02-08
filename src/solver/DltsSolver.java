@@ -8,14 +8,11 @@ import java.util.ArrayList;
 
 /**
  * User: Rory
- * Date: 2/2/13
- * Time: 3:24 PM
+ * Date: 2/5/13
+ * Time: 10:17 AM
  */
 
-/**
- * This class implements the Breadth First Tree Search
- */
-public class BftsSolver {
+public class DltsSolver {
 
     /**
      * Solves the puzzle
@@ -37,7 +34,7 @@ public class BftsSolver {
 
         // Continue until we run out of nodes to test
         while(!frontier.isEmpty()){
-            // Chose a node to expand on
+            // Choose a node to expand on
             PuzzleState chosenNode = frontier.get(0);
 
             // Remove that node from the frontier

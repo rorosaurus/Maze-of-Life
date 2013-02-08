@@ -1,6 +1,7 @@
 package pojo;
 
 import puzzle.BinaryPuzzle;
+import puzzle.Puzzle;
 
 /**
  * User: Rory
@@ -17,7 +18,7 @@ import puzzle.BinaryPuzzle;
 public class PuzzleState {
 
     // The layout of the board during this state
-    private BinaryPuzzle state;
+    private Puzzle state;
 
     // The state that expanded into this state
     private PuzzleState parent;
@@ -27,13 +28,14 @@ public class PuzzleState {
 
     // The cost to move to this state from the parent
     //private int pathcost;
+    // todo: we can probably hardcode this for the time being, using references we should be fine memory-wise
 
     /**
      * Constructor
      * @param state the current state of the puzzle
      * @param parent the parent PuzzleState, to allow solution tracing
      */
-    public PuzzleState(BinaryPuzzle state, PuzzleState parent) {
+    public PuzzleState(Puzzle state, PuzzleState parent) {
         this.state = state;
         this.parent = parent;
     }
@@ -52,7 +54,7 @@ public class PuzzleState {
      * Simple getter
      * @return the BinaryPuzzle associated with this state
      */
-    public BinaryPuzzle getState() {
+    public Puzzle getState() {
         return state;
     }
 

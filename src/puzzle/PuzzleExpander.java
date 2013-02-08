@@ -34,7 +34,7 @@ public class PuzzleExpander {
         ArrayList<PuzzleState> newStates = new ArrayList<PuzzleState>();
 
         // Be very careful to avoid manipulating references to our original state
-        boolean[][] oldBoard = oldNode.getState().getBoard().clone();
+        boolean[][] oldBoard = oldNode.getState().getBinaryBoard().clone();
         Point oldYou = new Point(oldNode.getState().getMyCoord().x, oldNode.getState().getMyCoord().y);
 
         // Iterate across the 9 possible moves
@@ -115,9 +115,9 @@ public class PuzzleExpander {
      * @param myNewCoord the new location of the player
      * @return an int representing the number of living cells neighboring
      */
-    private static int getNumLiveNeighbors(BinaryPuzzle puzzle, Point coordToCheck, Point myNewCoord){
+    private static int getNumLiveNeighbors(Puzzle puzzle, Point coordToCheck, Point myNewCoord){
         // Don't manipulate the old data
-        boolean[][] board = puzzle.getBoard().clone();
+        boolean[][] board = puzzle.getBinaryBoard().clone();
         // Initialize
         int numLiveNeighbors = 0;
         for(int i=-1; i<=1;i++){
@@ -166,8 +166,8 @@ public class PuzzleExpander {
         PuzzleReader puzzleReader = new PuzzleReader(puzzleNum);
         BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
 
-        for(int i=0;i<binaryPuzzle.getBoard().length;i++){
-            for(int j=0;j<binaryPuzzle.getBoard()[i].length;j++){
+        for(int i=0;i<binaryPuzzle.getBinaryBoard().length;i++){
+            for(int j=0;j<binaryPuzzle.getBinaryBoard()[i].length;j++){
                 System.out.print("(" + i + "," + j + ")\tNumber of Live Neighbors: ");
 //                System.out.println(getNumLiveNeighbors(binaryPuzzle, new Pair<Integer, Integer>(i, j)));
             }

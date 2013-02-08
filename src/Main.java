@@ -2,7 +2,7 @@ import io.PuzzleReader;
 import io.SolutionWriter;
 import pojo.PuzzleState;
 import puzzle.BinaryPuzzle;
-import solver.BftsSolver;
+import solver.BfSolver;
 
 /**
  * User: Rory
@@ -23,13 +23,13 @@ public class Main {
      */
     public static void main(String[] args){
 
+        // TODO: add support for specifying solver type?
+
         // Create a new PuzzleReader to read the file
         PuzzleReader puzzleReader = null;
 
         if(args.length != 1){
-            System.out.println("Improper use.  Please ensure you provide this program with an argument specifying a puzzle file.");
-            System.out.println("You may append the numbers '1-5' to the end of your launch parameters to select a local copy of a puzzle.");
-            System.out.println("Alternatively, you may append the absolute file path to the puzzle file.");
+            invalidArgs();
             return;
         }
         else{
@@ -48,7 +48,7 @@ public class Main {
             BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
 
             // Create a new solver
-            BftsSolver solver = new BftsSolver();
+            BfSolver solver = new BfSolver();
 
             // Run the solver and store the resulting object
             PuzzleState finalState = solver.graphSearch(binaryPuzzle);
@@ -57,10 +57,14 @@ public class Main {
             SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);
         }
         else{
-            System.out.println("Improper use.  Please ensure you provide this program with an argument specifying a puzzle file.");
-            System.out.println("You may append the numbers '1-5' to the end of your launch parameters to select a local copy of a puzzle.");
-            System.out.println("Alternatively, you may append the absolute file path to the puzzle file.");
+            invalidArgs();
             return;
         }
+    }
+
+    private static void invalidArgs(){
+        System.out.println("Improper use.  Please ensure you provide this program with an argument specifying a puzzle file.");
+        System.out.println("You may append the numbers '1-5' to the end of your launch parameters to select a local copy of a puzzle.");
+        System.out.println("Alternatively, you may append the absolute file path to the puzzle file.");
     }
 }

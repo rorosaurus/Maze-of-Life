@@ -20,6 +20,8 @@ import java.util.ArrayList;
  */
 public class SolutionWriter {
 
+    // TODO: properly translate internal coord system to previously defined coord system
+
     /**
      * This static method write the solution file
      * @param filename the name of the file
@@ -72,7 +74,7 @@ public class SolutionWriter {
                 out.write("\nBoard States\n");
                 for(PuzzleState state : solution){
                     out.write("\n");
-                    boolean[][] board = state.getState().getBoard();
+                    boolean[][] board = state.getState().getBinaryBoard();
                     Point myCoord = state.getState().getMyCoord();
                     for(int i=0;i<board[0].length;i++){
                         String output = "";
