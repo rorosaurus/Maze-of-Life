@@ -22,6 +22,8 @@ public class SolutionWriter {
 
     // TODO: properly translate internal coord system to previously defined coord system
 
+    // todo: verify i did this right
+
     /**
      * This static method write the solution file
      * @param filename the name of the file
@@ -61,12 +63,18 @@ public class SolutionWriter {
 
                 // Output the solution
                 out.write("\nSolution\n\n");
-                out.write("(" + solution.get(0).getState().getMyCoord().x + "," + solution.get(0).getState().getMyCoord().y + ") ");
+                // We need to subtract all y values from this height
+                int height = solution.get(0).getState().getBoard()[0].length - 1;
+                // I use a different coordinate system internally
+                out.write("(" + solution.get(0).getState().getMyCoord().x + "," +
+                                (height-solution.get(0).getState().getMyCoord().y) + ") ");
                 for(int i=1;i<solution.size();i++){
                     PuzzleState state = solution.get(i);
-                    out.write("-> (" + state.getState().getMyCoord().x + "," + state.getState().getMyCoord().y + ")\n");
+                    out.write("-> (" + state.getState().getMyCoord().x + "," +
+                                        (height - state.getState().getMyCoord().y) + ")\n");
                     if(i < solution.size()-1){
-                        out.write("(" + state.getState().getMyCoord().x + "," + state.getState().getMyCoord().y + ") ");
+                        out.write("(" + state.getState().getMyCoord().x + "," +
+                                        (height - state.getState().getMyCoord().y) + ") ");
                     }
                 }
 
@@ -74,20 +82,11 @@ public class SolutionWriter {
                 out.write("\nBoard States\n");
                 for(PuzzleState state : solution){
                     out.write("\n");
-                    boolean[][] board = state.getState().getBinaryBoard();
-                    Point myCoord = state.getState().getMyCoord();
+                    int[][] board = state.getState().getBoard();
                     for(int i=0;i<board[0].length;i++){
                         String output = "";
                         for(int j=0;j<board.length;j++){
-                            if(myCoord.equals(new Point(j,i))){
-                                output += "2";
-                            }
-                            else if(board[j][i]){
-                                output += "1";
-                            }
-                            else{
-                                output += "0";
-                            }
+                            output += board[i][j];
                         }
                         out.write(output + "\n");
                     }
