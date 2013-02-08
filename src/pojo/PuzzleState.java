@@ -1,6 +1,5 @@
 package pojo;
 
-import puzzle.BinaryPuzzle;
 import puzzle.Puzzle;
 
 /**
@@ -27,8 +26,7 @@ public class PuzzleState {
     //private Point action;
 
     // The cost to move to this state from the parent
-    //private int pathcost;
-    // todo: we can probably hardcode this for the time being, using references we should be fine memory-wise
+//    private int pathcost;
 
     /**
      * Constructor

@@ -37,6 +37,29 @@ public class BinaryPuzzle implements Puzzle{
     }
 
     /**
+     * Constructor
+     * @param board a 2D array of ints to represent dead/alive cells on the board (excluding player)
+     * @param goalCoord the coords of the goal
+     * @param myCoord the coords of the player
+     */
+    public BinaryPuzzle(int[][] board, Point goalCoord, Point myCoord) {
+        boolean[][] newBoard = new boolean[board.length][board[0].length];
+        for(int i=0;i<board.length;i++){
+            for(int j=0;j<board[0].length;j++){
+                if(board[i][j] == 0){
+                    newBoard[i][j] = false;
+                }
+                else if(board[i][j] == 1){
+                    newBoard[i][j] = true;
+                }
+            }
+        }
+        this.board = newBoard;
+        this.goalCoord = goalCoord;
+        this.myCoord = myCoord;
+    }
+
+    /**
      * Simple getter
      * @return the board
      */

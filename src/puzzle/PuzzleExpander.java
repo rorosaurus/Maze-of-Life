@@ -5,6 +5,7 @@ import pojo.PuzzleState;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * User: Rory
@@ -34,7 +35,7 @@ public class PuzzleExpander {
         ArrayList<PuzzleState> newStates = new ArrayList<PuzzleState>();
 
         // Be very careful to avoid manipulating references to our original state
-        boolean[][] oldBoard = oldNode.getState().getBinaryBoard().clone();
+        int[][] oldBoard = Arrays.copyOf(oldNode.getState().getBoard(), oldNode.getState().getBoard().length);
         Point oldYou = new Point(oldNode.getState().getMyCoord().x, oldNode.getState().getMyCoord().y);
 
         // Iterate across the 9 possible moves
@@ -44,7 +45,7 @@ public class PuzzleExpander {
                 try{
                     // By checking the cell before we move, we'll ensure we never move onto another cell
                     // We'll also trigger Exceptions on moves off the board
-                    if(!oldBoard[oldYou.x + i][oldYou.y + j]){
+                    if(!(oldBoard[oldYou.x + i][oldYou.y + j] == 1)){
                         // If we get this far, then we know the cell is empty and we can actually move there
 
                         // Here's where we'll try to move
@@ -53,7 +54,7 @@ public class PuzzleExpander {
                         // Make sure we won't kill ourselves moving there
                         if(!(neighbors < 2 || neighbors > 3)){
                             // Let's construct the new board!
-                            boolean[][] newBoard = safeClone(oldBoard);
+                            int[][] newBoard = Arrays.copyOf(oldBoard, oldBoard.length);
                             for(int a=0;a<oldBoard.length;a++){
                                 for(int b=0;b<oldBoard[a].length;b++){
                                     // Determine the number of neighbors to our current point
@@ -61,25 +62,25 @@ public class PuzzleExpander {
                                     int numLiveNeighbors = getNumLiveNeighbors(oldNode.getState(),currentCoords,myNewCoord);
 
                                     // Is the current cell alive or dead?
-                                    if(oldBoard[a][b]){
+                                    if(oldBoard[a][b] == 1){
                                         // Any live cell with fewer than two live neighbours dies, as if caused by under-population.
                                         if(numLiveNeighbors < 2){
-                                            newBoard[a][b] = false;
+                                            newBoard[a][b] = 0;
                                         }
                                         // Any live cell with two or three live neighbours lives on to the next generation.
                                         else if(numLiveNeighbors == 2 || numLiveNeighbors == 3){
-                                            newBoard[a][b] = true;
+                                            newBoard[a][b] = 1;
                                         }
                                         // Any live cell with more than three live neighbours dies, as if by overcrowding.
                                         else if(numLiveNeighbors > 3){
-                                            newBoard[a][b] = false;
+                                            newBoard[a][b] = 0;
                                         }
                                     }
                                     // Otherwise, the cell is dead (or ourselves, but we'll overwrite that result anyway later)
                                     // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
                                     else{
                                         if(numLiveNeighbors == 3){
-                                            newBoard[a][b] = true;
+                                            newBoard[a][b] = 1;
                                         }
                                     }
                                 }
@@ -87,13 +88,19 @@ public class PuzzleExpander {
                             // New board constructed!
 
                             // Make sure no other cell is occupying my spot on the new board
-                            newBoard[oldYou.x+ i][oldYou.y + j] = false;
+                            newBoard[oldYou.x+ i][oldYou.y + j] = 2;
                             // This is only needed because I'm storing my location separate from other cells for MAXIMUM MEMORY EFFICIENCY!
 
                             // Construct my new current coordinates
                             Point newCoord = new Point(oldYou.x + i,oldYou.y + j);
                             // Construct the new puzzle object
-                            BinaryPuzzle newPuzzle = new BinaryPuzzle(newBoard,oldNode.getState().getGoalCoord(), newCoord);
+                            Puzzle newPuzzle = null;
+                            if(oldNode.getState().getClass() == BinaryPuzzle.class){
+                                newPuzzle = new BinaryPuzzle(newBoard,oldNode.getState().getGoalCoord(), newCoord);
+                            }
+                            else{
+                                newPuzzle = new IntegerPuzzle(newBoard,oldNode.getState().getGoalCoord());
+                            }
                             // Construct the new State
                             PuzzleState newState = new PuzzleState(newPuzzle,oldNode);
                             // Add this new state to the list of states to return
@@ -117,7 +124,7 @@ public class PuzzleExpander {
      */
     private static int getNumLiveNeighbors(Puzzle puzzle, Point coordToCheck, Point myNewCoord){
         // Don't manipulate the old data
-        boolean[][] board = puzzle.getBinaryBoard().clone();
+        int[][] board = Arrays.copyOf(puzzle.getBoard(),puzzle.getBoard().length);
         // Initialize
         int numLiveNeighbors = 0;
         for(int i=-1; i<=1;i++){
@@ -128,7 +135,7 @@ public class PuzzleExpander {
                     try{
                         // If board[][] at the current location is true, there's a living cell
                         // Or if the player is there, we know there's a cell
-                        if(board[(coordToCheck.x + i)][(coordToCheck.y + j)] ||
+                        if(board[(coordToCheck.x + i)][(coordToCheck.y + j)] == 1 ||
                                 myNewCoord.equals(new Point(coordToCheck.x + i, coordToCheck.y + j))){
                             numLiveNeighbors++;
                         }
@@ -141,21 +148,6 @@ public class PuzzleExpander {
             }
         }
         return numLiveNeighbors;
-    }
-
-    /**
-     * Quick function I wrote to safely clone old boards
-     * @param board the board to clone
-     * @return a clone of the board
-     */
-    private static boolean[][] safeClone(boolean[][] board){
-        boolean[][] result = new boolean[board.length][board[0].length];
-        for(int i=0;i<board.length;i++){
-            for(int j=0;j<board[0].length;j++){
-                result[i][j] = Boolean.valueOf(board[i][j]);
-            }
-        }
-        return result;
     }
 
     /**
