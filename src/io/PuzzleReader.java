@@ -133,7 +133,9 @@ public class PuzzleReader {
                 // First we read the width and height, separate them
                 String[] puzzleSize = currentLine.split(" ", 2);
                 // Construct our board array by parsing the strings we read
-                board = new int[Integer.parseInt(puzzleSize[0])][Integer.parseInt(puzzleSize[1])];
+                int width = Integer.parseInt(puzzleSize[0]);
+                int height = Integer.parseInt(puzzleSize[1]);
+                board = new int[width][height];
 
                 // Look for goal coords
                 if ((currentLine = br.readLine()) != null) {
@@ -149,7 +151,7 @@ public class PuzzleReader {
                         // Start at one because .split("") gives us an empty array[0]
                         for(int i=1; i<row.length;i++){
                             // Use the correct indices for the board, though
-                            board[i-1][rowNum] = Integer.parseInt(row[i]);
+                            board[i-1][height - 1 - rowNum] = Integer.parseInt(row[i]);
                         }
                         // Increment our row number in anticipation of the new currentLine
                         rowNum++;

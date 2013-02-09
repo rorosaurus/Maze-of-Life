@@ -1,6 +1,6 @@
 import io.PuzzleReader;
 import io.SolutionWriter;
-import pojo.PuzzleState;
+import pojo.State;
 import puzzle.BinaryPuzzle;
 import solver.BfSolver;
 
@@ -51,7 +51,7 @@ public class Main {
             BfSolver solver = new BfSolver();
 
             // Run the solver and store the resulting object
-            PuzzleState finalState = solver.graphSearch(binaryPuzzle);
+            State finalState = solver.treeSearch(binaryPuzzle);
 
             // Write the solution to a file in the /solution/ directory
             SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);

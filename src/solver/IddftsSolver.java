@@ -6,14 +6,14 @@ package solver;
  * Time: 10:16 AM
  */
 
-import pojo.PuzzleState;
+import pojo.State;
 
 /**
  * This class implements Iterative-Deepening - Depth First Tree Search
  */
 public class IddftsSolver {
 
-    public PuzzleState idDfs(){
+    public State idDfs(){
         // for i = 0 to ∞ do
         for(int depth=0;depth<Integer.MAX_VALUE;depth++){
             // result ← DLS(problem,i)

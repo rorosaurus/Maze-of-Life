@@ -1,7 +1,7 @@
 package puzzle;
 
 import io.PuzzleReader;
-import pojo.PuzzleState;
+import pojo.State;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -27,16 +27,16 @@ public class PuzzleExpander {
 
     /**
      * This static method will expand a node into new nodes
-     * @param oldNode the PuzzleState to be expanded
+     * @param oldNode the State to be expanded
      * @return new States to be explored
      */
-    public static ArrayList<PuzzleState> expand(PuzzleState oldNode){
+    public static ArrayList<State> expand(State oldNode){
         // Initialize our return object
-        ArrayList<PuzzleState> newStates = new ArrayList<PuzzleState>();
+        ArrayList<State> newStates = new ArrayList<State>();
 
         // Be very careful to avoid manipulating references to our original state
-        int[][] oldBoard = Arrays.copyOf(oldNode.getState().getBoard(), oldNode.getState().getBoard().length);
-        Point oldYou = new Point(oldNode.getState().getMyCoord().x, oldNode.getState().getMyCoord().y);
+        int[][] oldBoard = Arrays.copyOf(oldNode.getPuzzle().getBoard(), oldNode.getPuzzle().getBoard().length);
+        Point oldYou = new Point(oldNode.getPuzzle().getMyCoord().x, oldNode.getPuzzle().getMyCoord().y);
 
         // Iterate across the 9 possible moves
         for(int i=-1; i<=1;i++){
@@ -50,7 +50,7 @@ public class PuzzleExpander {
 
                         // Here's where we'll try to move
                         Point myNewCoord = new Point(oldYou.x + i,oldYou.y + j);
-                        int neighbors = getNumLiveNeighbors(oldNode.getState(),myNewCoord,myNewCoord);
+                        int neighbors = getNumLiveNeighbors(oldNode.getPuzzle(),myNewCoord,myNewCoord);
                         // Make sure we won't kill ourselves moving there
                         if(!(neighbors < 2 || neighbors > 3)){
                             // Let's construct the new board!
@@ -59,7 +59,7 @@ public class PuzzleExpander {
                                 for(int b=0;b<oldBoard[a].length;b++){
                                     // Determine the number of neighbors to our current point
                                     Point currentCoords = new Point(a,b);
-                                    int numLiveNeighbors = getNumLiveNeighbors(oldNode.getState(),currentCoords,myNewCoord);
+                                    int numLiveNeighbors = getNumLiveNeighbors(oldNode.getPuzzle(),currentCoords,myNewCoord);
 
                                     // Is the current cell alive or dead?
                                     if(oldBoard[a][b] == 1){
@@ -95,14 +95,14 @@ public class PuzzleExpander {
                             Point newCoord = new Point(oldYou.x + i,oldYou.y + j);
                             // Construct the new puzzle object
                             Puzzle newPuzzle = null;
-                            if(oldNode.getState().getClass() == BinaryPuzzle.class){
-                                newPuzzle = new BinaryPuzzle(newBoard,oldNode.getState().getGoalCoord(), newCoord);
+                            if(oldNode.getPuzzle().getClass() == BinaryPuzzle.class){
+                                newPuzzle = new BinaryPuzzle(newBoard,oldNode.getPuzzle().getGoalCoord(), newCoord);
                             }
                             else{
-                                newPuzzle = new IntegerPuzzle(newBoard,oldNode.getState().getGoalCoord());
+                                newPuzzle = new IntegerPuzzle(newBoard,oldNode.getPuzzle().getGoalCoord());
                             }
                             // Construct the new State
-                            PuzzleState newState = new PuzzleState(newPuzzle,oldNode);
+                            State newState = new State(newPuzzle,oldNode);
                             // Add this new state to the list of states to return
                             newStates.add(newState);
                         }

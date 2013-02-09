@@ -1,6 +1,6 @@
 package solver;
 
-import pojo.PuzzleState;
+import pojo.State;
 import puzzle.BinaryPuzzle;
 import puzzle.PuzzleExpander;
 
@@ -19,15 +19,15 @@ public class DltsSolver {
      * @param problem the Puzzle to solve
      * @return the State that reaches the goal
      */
-    public PuzzleState graphSearch(BinaryPuzzle problem){
+    public State graphSearch(BinaryPuzzle problem){
         // Create the initial state
-        final PuzzleState initialState = new PuzzleState(problem, null);
+        final State initialState = new State(problem, null);
 
         // Define the frontier
-        ArrayList<PuzzleState> frontier = new ArrayList<PuzzleState>();
+        ArrayList<State> frontier = new ArrayList<State>();
 
         // Define the explored states
-        ArrayList<PuzzleState> exploredStates = new ArrayList<PuzzleState>();
+        ArrayList<State> exploredStates = new ArrayList<State>();
 
         // Expand the initial state, adding the elements to the frontier
         frontier.addAll(PuzzleExpander.expand(initialState));
@@ -35,7 +35,7 @@ public class DltsSolver {
         // Continue until we run out of nodes to test
         while(!frontier.isEmpty()){
             // Choose a node to expand on
-            PuzzleState chosenNode = frontier.get(0);
+            State chosenNode = frontier.get(0);
 
             // Remove that node from the frontier
             frontier.remove(0);
@@ -49,10 +49,10 @@ public class DltsSolver {
             exploredStates.add(chosenNode);
 
             // Expand the chosen node
-            ArrayList<PuzzleState> expandedNodes = PuzzleExpander.expand(chosenNode);
+            ArrayList<State> expandedNodes = PuzzleExpander.expand(chosenNode);
 
             // Add resulting nodes to frontier only if they're not in the frontier or explored set
-            for(PuzzleState state : expandedNodes){
+            for(State state : expandedNodes){
                 if(!frontier.contains(state) && !exploredStates.contains(state)){
                     frontier.add(state);
                 }

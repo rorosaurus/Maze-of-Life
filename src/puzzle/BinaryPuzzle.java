@@ -92,13 +92,13 @@ public class BinaryPuzzle implements Puzzle{
         for(int i=0;i<board[0].length;i++){
             for(int j=0;j<board.length;j++){
                 if(myCoord.equals(new Point(j,i))){
-                    result[i][j] = 2;
+                    result[j][i] = 2;
                 }
                 else if(board[j][i]){
-                    result[i][j] = 1;
+                    result[j][i] = 1;
                 }
                 else{
-                    result[i][j] = 0;
+                    result[j][i] = 0;
                 }
             }
         }
