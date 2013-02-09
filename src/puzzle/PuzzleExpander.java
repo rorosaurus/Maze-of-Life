@@ -78,7 +78,7 @@ public class PuzzleExpander {
                                     }
                                     // Otherwise, the cell is dead (or ourselves, but we'll overwrite that result anyway later)
                                     // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-                                    else{
+                                    else if(oldBoard[a][b] == 0){
                                         if(numLiveNeighbors == 3){
                                             newBoard[a][b] = 1;
                                         }

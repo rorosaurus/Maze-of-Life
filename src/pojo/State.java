@@ -65,4 +65,14 @@ public class State {
     public State getParent() {
         return parent;
     }
+
+    public int getDepth(){
+        int depth = 0;
+        State newParent = parent;
+        while(newParent != null){
+            depth++;
+            newParent = newParent.getParent();
+        }
+        return depth;
+    }
 }

@@ -6,8 +6,6 @@ import puzzle.PuzzleExpander;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
 
 /**
  * User: Rory
