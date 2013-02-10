@@ -1,6 +1,7 @@
 package solver;
 
 import pojo.State;
+import puzzle.BinaryPuzzle;
 import puzzle.Puzzle;
 import puzzle.PuzzleExpander;
 
@@ -23,7 +24,7 @@ public class BfSolver {
      * @param problem the Puzzle to solve
      * @return the State that reaches the goal
      */
-    public State treeSearch(Puzzle problem){
+    public State treeSearch(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);
 
@@ -61,7 +62,7 @@ public class BfSolver {
      * @param problem the Puzzle to solve
      * @return the State that reaches the goal
      */
-    public State graphSearch(Puzzle problem){
+    public State graphSearch(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);
 

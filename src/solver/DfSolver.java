@@ -1,6 +1,7 @@
 package solver;
 
 import pojo.State;
+import puzzle.BinaryPuzzle;
 import puzzle.Puzzle;
 import puzzle.PuzzleExpander;
 
@@ -22,7 +23,7 @@ public class DfSolver {
      * Iterative-Deepening - Depth First Tree Search (ID-DFTS)
      * @return the Solution Puzzle, or null if no solution found
      */
-    public State idDfts(Puzzle problem){
+    public State idDfts(BinaryPuzzle problem){
         // for i = 0 to ∞ do
         for(int depth=0;depth<Integer.MAX_VALUE;depth++){
 
@@ -37,7 +38,7 @@ public class DfSolver {
         return null;
     }
 
-    public State dlts(Puzzle problem, int maxDepth){
+    public State dlts(BinaryPuzzle problem, int maxDepth){
         // Create the initial state
         final State initialState = new State(problem, null);
 
@@ -83,7 +84,7 @@ public class DfSolver {
         return null;
     }
 
-    public State dfts(Puzzle problem){
+    public State dfts(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);
 
@@ -118,7 +119,7 @@ public class DfSolver {
         return null;
     }
 
-    public State dfgs(Puzzle problem){
+    public State dfgs(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);
 

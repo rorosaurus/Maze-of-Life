@@ -2,6 +2,7 @@ package io;
 
 import pojo.State;
 
+import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -79,11 +80,20 @@ public class SolutionWriter {
                 out.write("\nBoard States\n");
                 for(State state : solution){
                     out.write("\n");
-                    int[][] board = state.getPuzzle().getBoard();
+                    boolean[][] board = state.getPuzzle().getBinaryBoard();
+                    Point myCoord = state.getPuzzle().getMyCoord();
                     for(int i=board[0].length-1;i>=0;i--){
                         String output = "";
                         for(int j=0;j<board.length;j++){
-                            output += board[j][i];
+                            if(myCoord.equals(new Point(j,i))){
+                                output += "2";
+                            }
+                            else if(board[j][i]){
+                                output += "1";
+                            }
+                            else{
+                                output += "0";
+                            }
                         }
                         out.write(output + "\n");
                     }

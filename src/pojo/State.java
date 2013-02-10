@@ -1,5 +1,6 @@
 package pojo;
 
+import puzzle.BinaryPuzzle;
 import puzzle.Puzzle;
 
 /**
@@ -17,7 +18,7 @@ import puzzle.Puzzle;
 public class State {
 
     // The layout of the board during this puzzle
-    private Puzzle puzzle;
+    private BinaryPuzzle puzzle;
 
     // The puzzle that expanded into this puzzle
     private State parent;
@@ -33,7 +34,7 @@ public class State {
      * @param puzzle the current puzzle of the puzzle
      * @param parent the parent State, to allow solution tracing
      */
-    public State(Puzzle puzzle, State parent) {
+    public State(BinaryPuzzle puzzle, State parent) {
         this.puzzle = puzzle;
         this.parent = parent;
     }
@@ -54,7 +55,7 @@ public class State {
      * Simple getter
      * @return the BinaryPuzzle associated with this puzzle
      */
-    public Puzzle getPuzzle() {
+    public BinaryPuzzle getPuzzle() {
         return puzzle;
     }
 
