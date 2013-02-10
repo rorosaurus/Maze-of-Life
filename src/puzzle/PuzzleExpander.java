@@ -45,7 +45,7 @@ public class PuzzleExpander {
                 try{
                     // By checking the cell before we move, we'll ensure we never move onto another cell
                     // We'll also trigger Exceptions on moves off the board
-                    if(!(oldBoard[oldYou.x + i][oldYou.y + j] == 1)){
+                    if(oldBoard[oldYou.x + i][oldYou.y + j] != 1){
                         // If we get this far, then we know the cell is empty and we can actually move there
 
                         // Here's where we'll try to move
@@ -55,32 +55,36 @@ public class PuzzleExpander {
                         if(!(neighbors < 2 || neighbors > 3)){
                             // Let's construct the new board!
                             int[][] newBoard = Arrays.copyOf(oldBoard, oldBoard.length);
+                            newBoard[oldYou.x+ i][oldYou.y + j] = 2;
+                            oldBoard[oldYou.x][oldYou.y] = 0;
                             for(int a=0;a<oldBoard.length;a++){
                                 for(int b=0;b<oldBoard[a].length;b++){
-                                    // Determine the number of neighbors to our current point
-                                    Point currentCoords = new Point(a,b);
-                                    int numLiveNeighbors = getNumLiveNeighbors(oldNode.getPuzzle(),currentCoords,myNewCoord);
+                                    if(!(a == oldYou.x+i && b == oldYou.y+j)){
+                                        // Determine the number of neighbors to our current point
+                                        Point currentCoords = new Point(a,b);
+                                        int numLiveNeighbors = getNumLiveNeighbors(oldNode.getPuzzle(),currentCoords,myNewCoord);
 
-                                    // Is the current cell alive or dead?
-                                    if(oldBoard[a][b] == 1){
-                                        // Any live cell with fewer than two live neighbours dies, as if caused by under-population.
-                                        if(numLiveNeighbors < 2){
-                                            newBoard[a][b] = 0;
+                                        // Is the current cell alive or dead?
+                                        if(oldBoard[a][b] == 1 || oldBoard[a][b] == 2){
+                                            // Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+                                            if(numLiveNeighbors < 2){
+                                                newBoard[a][b] = 0;
+                                            }
+                                            // Any live cell with two or three live neighbours lives on to the next generation.
+                                            else if(numLiveNeighbors == 2 || numLiveNeighbors == 3){
+                                                newBoard[a][b] = 1;
+                                            }
+                                            // Any live cell with more than three live neighbours dies, as if by overcrowding.
+                                            else if(numLiveNeighbors > 3){
+                                                newBoard[a][b] = 0;
+                                            }
                                         }
-                                        // Any live cell with two or three live neighbours lives on to the next generation.
-                                        else if(numLiveNeighbors == 2 || numLiveNeighbors == 3){
-                                            newBoard[a][b] = 1;
-                                        }
-                                        // Any live cell with more than three live neighbours dies, as if by overcrowding.
-                                        else if(numLiveNeighbors > 3){
-                                            newBoard[a][b] = 0;
-                                        }
-                                    }
-                                    // Otherwise, the cell is dead (or ourselves, but we'll overwrite that result anyway later)
-                                    // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-                                    else if(oldBoard[a][b] == 0){
-                                        if(numLiveNeighbors == 3){
-                                            newBoard[a][b] = 1;
+                                        // Otherwise, the cell is dead (or ourselves, but we'll overwrite that result anyway later)
+                                        // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+                                        else if(oldBoard[a][b] == 0){
+                                            if(numLiveNeighbors == 3){
+                                                newBoard[a][b] = 1;
+                                            }
                                         }
                                     }
                                 }
@@ -88,7 +92,10 @@ public class PuzzleExpander {
                             // New board constructed!
 
                             // Make sure no other cell is occupying my spot on the new board
-                            newBoard[oldYou.x+ i][oldYou.y + j] = 2;
+                            if(newBoard[oldYou.x+ i][oldYou.y + j] == 1){
+                                System.out.println();
+                            }
+//                            newBoard[oldYou.x+ i][oldYou.y + j] = 2;
                             // This is only needed because I'm storing my location separate from other cells for MAXIMUM MEMORY EFFICIENCY!
 
                             // Construct my new current coordinates
@@ -122,7 +129,7 @@ public class PuzzleExpander {
      * @param myNewCoord the new location of the player
      * @return an int representing the number of living cells neighboring
      */
-    private static int getNumLiveNeighbors(Puzzle puzzle, Point coordToCheck, Point myNewCoord){
+    public static int getNumLiveNeighbors(Puzzle puzzle, Point coordToCheck, Point myNewCoord){
         // Don't manipulate the old data
         int[][] board = Arrays.copyOf(puzzle.getBoard(),puzzle.getBoard().length);
         // Initialize
@@ -161,7 +168,7 @@ public class PuzzleExpander {
         for(int i=0;i<binaryPuzzle.getBinaryBoard().length;i++){
             for(int j=0;j<binaryPuzzle.getBinaryBoard()[i].length;j++){
                 System.out.print("(" + i + "," + j + ")\tNumber of Live Neighbors: ");
-//                System.out.println(getNumLiveNeighbors(binaryPuzzle, new Pair<Integer, Integer>(i, j)));
+                System.out.println(getNumLiveNeighbors(binaryPuzzle, new Point(i,j), new Point(1,4)));
             }
         }
     }

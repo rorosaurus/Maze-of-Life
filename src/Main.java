@@ -2,8 +2,11 @@ import io.PuzzleReader;
 import io.SolutionWriter;
 import pojo.State;
 import puzzle.BinaryPuzzle;
+import puzzle.PuzzleExpander;
 import solver.BfSolver;
 import solver.DfSolver;
+
+import java.awt.*;
 
 /**
  * User: Rory
@@ -47,6 +50,8 @@ public class Main {
         if(puzzleReader != null){
             // Create a new BinaryPuzzle to be solved
             BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
+
+//            PuzzleExpander.testNumLiveNeighbors(1);
 
             // Create a new solver
             BfSolver solver = new BfSolver();
