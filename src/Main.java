@@ -27,7 +27,7 @@ public class Main {
      */
     public static void main(String[] args){
 
-        // TODO: add support for specifying solver type?
+        // TODO: add support for specifying solver type?  maybe parse a string with a switch?
 
         // Create a new PuzzleReader to read the file
         PuzzleReader puzzleReader = null;
@@ -68,6 +68,9 @@ public class Main {
         }
     }
 
+    /**
+     * Basic outputs for invalid arguments
+     */
     private static void invalidArgs(){
         System.out.println("Improper use.  Please ensure you provide this program with an argument specifying a puzzle file.");
         System.out.println("You may append the numbers '1-5' to the end of your launch parameters to select a local copy of a puzzle.");

@@ -67,6 +67,10 @@ public class State {
         return parent;
     }
 
+    /**
+     * This function computes the depth of this state by counting parents
+     * @return an int representing the depth of the state
+     */
     public int getDepth(){
         int depth = 0;
         State newParent = parent;

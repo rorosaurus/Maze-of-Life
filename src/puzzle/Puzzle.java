@@ -8,6 +8,8 @@ import java.awt.*;
  * Time: 3:20 PM
  */
 
+// todo: use or trash
+
 public interface Puzzle {
 
     /**

@@ -2,7 +2,6 @@ package solver;
 
 import pojo.State;
 import puzzle.BinaryPuzzle;
-import puzzle.Puzzle;
 import puzzle.PuzzleExpander;
 
 import java.util.ArrayList;
@@ -38,6 +37,12 @@ public class DfSolver {
         return null;
     }
 
+    /**
+     * Depth Limited Tree Search
+     * @param problem the puzzle to solve
+     * @param maxDepth the maximum depth to go to
+     * @return the State object storing the solution
+     */
     public State dlts(BinaryPuzzle problem, int maxDepth){
         // Create the initial state
         final State initialState = new State(problem, null);
@@ -84,6 +89,11 @@ public class DfSolver {
         return null;
     }
 
+    /**
+     * Depth First Tree Search
+     * @param problem the Puzzle to solve
+     * @return a State object storing the solution
+     */
     public State dfts(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);
@@ -119,6 +129,11 @@ public class DfSolver {
         return null;
     }
 
+    /**
+     * Depth First Graph Search
+     * @param problem the Puzzle to solve
+     * @return a State object storing the solution
+     */
     public State dfgs(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);

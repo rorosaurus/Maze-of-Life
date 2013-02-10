@@ -8,6 +8,8 @@ import java.awt.*;
  * Time: 9:43 AM
  */
 
+// todo: consider using this later or trash it
+
 /**
  * This class stores the board as a 2D array of int's
  * This uses a bit more space but saves on overall cpu time, normally

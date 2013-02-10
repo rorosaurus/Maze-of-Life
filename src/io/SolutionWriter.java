@@ -20,10 +20,6 @@ import java.util.ArrayList;
  */
 public class SolutionWriter {
 
-    // TODO: properly translate internal coord system to previously defined coord system
-
-    // todo: verify i did this right
-
     /**
      * This static method write the solution file
      * @param filename the name of the file
