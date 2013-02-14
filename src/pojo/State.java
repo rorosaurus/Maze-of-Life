@@ -80,4 +80,26 @@ public class State {
         }
         return depth;
     }
+
+    /**
+     * Provides the Manhattan Distance to the goal node from this state
+     * eg. |x1-x2| + |y1-y2|
+     * @return an int, the Manhattan Distance to goal node
+     */
+    public int getManhattanDistanceFromGoal(){
+        return Math.abs(puzzle.getMyCoord().x - puzzle.getGoalCoord().x) +
+               Math.abs(puzzle.getMyCoord().y - puzzle.getGoalCoord().y);
+    }
+
+    /**
+     * Provides the Euclidean Distance to the goal node from this state
+     * eg. sqrt((x1-x2)^2 + (y1-y2)^2)
+     * @return an int, the Euclidean Distance to goal node
+     */
+    public int getEuclideanDistanceFromGoal(){
+        return (int)Math.sqrt(
+                Math.pow(puzzle.getMyCoord().x - puzzle.getGoalCoord().x, 2) +
+                Math.pow(puzzle.getMyCoord().y - puzzle.getGoalCoord().y, 2)
+        );
+    }
 }

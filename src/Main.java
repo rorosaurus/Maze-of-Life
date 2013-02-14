@@ -5,6 +5,7 @@ import puzzle.BinaryPuzzle;
 import puzzle.PuzzleExpander;
 import solver.BfSolver;
 import solver.DfSolver;
+import solver.GbfSolver;
 
 import java.awt.*;
 
@@ -54,10 +55,10 @@ public class Main {
 //            PuzzleExpander.testNumLiveNeighbors(1);
 
             // Create a new solver
-            DfSolver solver = new DfSolver();
+            GbfSolver solver = new GbfSolver();
 
             // Run the solver and store the resulting object
-            State finalState = solver.idDfts(binaryPuzzle);
+            State finalState = solver.graphSearch(binaryPuzzle);
 
             // Write the solution to a file in the /solution/ directory
             SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);
