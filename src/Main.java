@@ -52,8 +52,6 @@ public class Main {
             // Create a new BinaryPuzzle to be solved
             BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
 
-//            PuzzleExpander.testNumLiveNeighbors(1);
-
             // Create a new solver
             GbfSolver solver = new GbfSolver();
 

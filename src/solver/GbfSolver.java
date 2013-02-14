@@ -14,8 +14,16 @@ import java.util.*;
  * Time: 10:27 AM
  */
 
+/**
+ * This class implements Greedy Best First Searches
+ */
 public class GbfSolver {
 
+    /**
+     * Solves the puzzle using Greedy Best First Graph Search
+     * @param problem the Puzzle to solve
+     * @return the State that reaches the goal
+     */
     public State graphSearch(BinaryPuzzle problem){
         // Create the initial state
         final State initialState = new State(problem, null);
@@ -32,7 +40,7 @@ public class GbfSolver {
         // Continue until we run out of nodes to test
         while(!frontier.isEmpty()){
 
-            // Sort the array of new nodes by Euclidean distance
+            // Sort the array of new nodes by Manhattan distance
             Collections.sort(frontier, new ManhattanSorter());
 
             // Choose a node to expand on
