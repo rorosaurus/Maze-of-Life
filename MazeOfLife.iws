@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d0f750a-0730-4fe1-abe4-800824fc7e65" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pojo/Heuristic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/solver/AstarSolver.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sorter/ManhattanSorter.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sorter/EuclideanSorter.java" afterPath="$PROJECT_DIR$/src/sorter/HeuristicSorter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MazeOfLife.jar" afterPath="$PROJECT_DIR$/MazeOfLife.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MazeOfLife.iws" afterPath="$PROJECT_DIR$/MazeOfLife.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/puzzle1solution.txt" afterPath="$PROJECT_DIR$/solutions/puzzle1solution.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/puzzle2solution.txt" afterPath="$PROJECT_DIR$/solutions/puzzle2solution.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/puzzle3solution.txt" afterPath="$PROJECT_DIR$/solutions/puzzle3solution.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/puzzle5solution.txt" afterPath="$PROJECT_DIR$/solutions/puzzle5solution.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" afterPath="$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/solver/GbfSolver.java" afterPath="$PROJECT_DIR$/src/solver/GbfSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/solver/AstarSolver.java" afterPath="$PROJECT_DIR$/src/solver/AstarSolver.java" />
     </list>
     <ignored path="MazeOfLife.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,43 +83,16 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="34" selection-start="1465" selection-end="1465" vertical-scroll-proportion="1.9736842">
+            <state line="52" column="26" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.3147208">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="puzzle5solution.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solutions/puzzle5solution.txt">
+      <file leaf-file-name="puzzle1solution.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solutions/puzzle1solution.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="12" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="puzzle4solution.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solutions/puzzle4solution.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="10" selection-start="3094" selection-end="3094" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="puzzle3solution.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solutions/puzzle3solution.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="0" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="puzzle2solution.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solutions/puzzle2solution.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="9" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0">
+            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,7 +128,25 @@
       <file leaf-file-name="AstarSolver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/solver/AstarSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="95" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
+            <state line="75" column="13" selection-start="2308" selection-end="2308" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BfSolver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solver/BfSolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="30" selection-start="1966" selection-end="1966" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DfSolver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/solver/DfSolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -207,8 +189,8 @@
         <option value="$PROJECT_DIR$/src/solver/GbfSolver.java" />
         <option value="$PROJECT_DIR$/src/pojo/Heuristic.java" />
         <option value="$PROJECT_DIR$/src/sorter/HeuristicSorter.java" />
-        <option value="$PROJECT_DIR$/src/solver/AstarSolver.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/solver/AstarSolver.java" />
       </list>
     </option>
   </component>
@@ -561,7 +543,7 @@
     <configuration default="false" name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="5" />
+      <option name="PROGRAM_PARAMETERS" value="1" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -685,7 +667,11 @@
       <created>1360807968673</created>
       <updated>1360807968673</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Implemented A* and Heuristic sorter for puzzle 4, ran all puzzles and updated solutions">
+      <created>1361302544700</created>
+      <updated>1361302544700</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,11 +689,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32700893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18506494" sideWeight="0.25421134" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18506494" sideWeight="0.41500765" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18506494" sideWeight="0.35375193" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.381317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18506494" sideWeight="0.5742726" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.381317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -751,7 +737,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final changes for assignment 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented A* and Heuristic sorter for puzzle 4, ran all puzzles and updated solutions" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -782,6 +768,7 @@
     <MESSAGE value="Final touches for the second assignment submission" />
     <MESSAGE value="Finished implementation for assignment 3" />
     <MESSAGE value="Final changes for assignment 3" />
+    <MESSAGE value="Implemented A* and Heuristic sorter for puzzle 4, ran all puzzles and updated solutions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -791,11 +778,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/puzzle/Puzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/puzzle/IntegerPuzzle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="44" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" />
@@ -809,13 +791,6 @@
     <entry file="file://$PROJECT_DIR$/src/io/SolutionWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="0" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/solver/BfSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="12" selection-start="1451" selection-end="1529" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pojo/State.java">
@@ -832,13 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/solver/AstarSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="95" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pojo/Heuristic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="3" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0">
@@ -849,13 +817,6 @@
     <entry file="file://$PROJECT_DIR$/src/sorter/HeuristicSorter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="3" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solutions/puzzle1solution.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="7" selection-start="525" selection-end="525" vertical-scroll-proportion="0.57746476">
           <folding />
         </state>
       </provider>
@@ -888,9 +849,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/solver/BfSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="30" selection-start="1966" selection-end="1966" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solutions/puzzle1solution.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solver/DfSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/solver/AstarSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="13" selection-start="2308" selection-end="2308" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="34" selection-start="1465" selection-end="1465" vertical-scroll-proportion="1.9736842">
+        <state line="52" column="26" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.3147208">
           <folding />
         </state>
       </provider>

@@ -57,7 +57,7 @@ public class Main {
             AstarSolver solver = new AstarSolver();
 
             // Run the solver and store the resulting object
-            State finalState = solver.treeSearch(binaryPuzzle);
+            State finalState = solver.idts(binaryPuzzle);
 
             // Write the solution to a file in the /solution/ directory
             SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);
