@@ -3,6 +3,7 @@ import io.SolutionWriter;
 import pojo.State;
 import puzzle.BinaryPuzzle;
 import puzzle.PuzzleExpander;
+import solver.AstarSolver;
 import solver.BfSolver;
 import solver.DfSolver;
 import solver.GbfSolver;
@@ -53,10 +54,10 @@ public class Main {
             BinaryPuzzle binaryPuzzle = puzzleReader.readBinaryPuzzle();
 
             // Create a new solver
-            GbfSolver solver = new GbfSolver();
+            AstarSolver solver = new AstarSolver();
 
             // Run the solver and store the resulting object
-            State finalState = solver.graphSearch(binaryPuzzle);
+            State finalState = solver.treeSearch(binaryPuzzle);
 
             // Write the solution to a file in the /solution/ directory
             SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);
