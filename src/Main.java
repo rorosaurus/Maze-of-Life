@@ -56,8 +56,17 @@ public class Main {
             // Create a new solver
             AstarSolver solver = new AstarSolver();
 
+            // Mark start time
+            long startTime = System.currentTimeMillis();
+
             // Run the solver and store the resulting object
-            State finalState = solver.idts(binaryPuzzle);
+            State finalState = solver.treeSearch(binaryPuzzle);
+
+            // Mark end time
+            long endTime = System.currentTimeMillis();
+
+            // Output time
+            System.out.println("Solver took " + (endTime-startTime)/1000f + " seconds to run.");
 
             // Write the solution to a file in the /solution/ directory
             SolutionWriter.writeSolution("puzzle" + puzzleReader.getPuzzleNumber() + "solution.txt",finalState);

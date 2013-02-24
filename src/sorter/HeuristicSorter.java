@@ -11,6 +11,9 @@ import java.util.Comparator;
  * Time: 5:05 PM
  */
 
+/**
+ * This class handles sorting of States based on different heuristics
+ */
 public class HeuristicSorter implements Comparator<State>{
 
     Heuristic heuristic;
@@ -34,6 +37,11 @@ public class HeuristicSorter implements Comparator<State>{
             case Manhattan: result = o1.getManhattanDistanceFromGoal() - o2.getManhattanDistanceFromGoal(); break;
             case ManhattanPlusDepth: result = (o1.getDepth() + o1.getManhattanDistanceFromGoal()) -
                                               (o2.getDepth() + o2.getManhattanDistanceFromGoal()); break;
+            case Chebyshev: result = o1.getChebyshevDistanceFromGoal() - o2.getChebyshevDistanceFromGoal(); break;
+            case ChebyshevPlusDepth: result = (o1.getDepth() + o1.getChebyshevDistanceFromGoal()) -
+                    (o2.getDepth() + o2.getChebyshevDistanceFromGoal()); break;
+            case ChebyshevTimesDepth: result = (o1.getDepth() + o1.getChebyshevDistanceFromGoal()) -
+                                              (o2.getDepth() * o2.getChebyshevDistanceFromGoal()); break;
             default: result = o1.getManhattanDistanceFromGoal() - o2.getManhattanDistanceFromGoal(); break;
         }
         return result;

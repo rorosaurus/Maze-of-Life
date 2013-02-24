@@ -7,6 +7,10 @@ You can obtain the Java JDK/JVM from here: http://www.oracle.com/technetwork/jav
 
 The JDK/JVM is needed to run my assignment, but IDEA is not.  I have included my project files if you wish to view them in IDEA.
 
+The JDK I am specifically using is jdk1.7.0_09, straight from Oracle.  I have verified that my code runs properly on all platforms that employ this JDK.
+
+If you are unable to get this code to run on your machine, please verify you are using this or a similar Oracle JDK, and not OpenJDK.
+
 
 Alternatively, you can view my source in your desired program and run the supplied compiled .jar file from command line via
 

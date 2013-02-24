@@ -102,4 +102,14 @@ public class State {
                 Math.pow(puzzle.getMyCoord().y - puzzle.getGoalCoord().y, 2)
         );
     }
+
+    /**
+     * Provides the Chebyshev Distance to the goal node from this state
+     * eg. max(|x1-x2|,|y1-y2|)
+     * @return an int, the Chebyshev Distance to the goal node
+     */
+    public int getChebyshevDistanceFromGoal(){
+        return Math.max(Math.abs(puzzle.getMyCoord().x - puzzle.getGoalCoord().x),
+                        Math.abs(puzzle.getMyCoord().y - puzzle.getGoalCoord().y));
+    }
 }
